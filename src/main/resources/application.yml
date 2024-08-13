@@ -1,4 +1,5 @@
 spring :
+
   application:
     name: demo
 
@@ -8,25 +9,19 @@ spring :
     username: root
     password:
 
-    jpa:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
       hibernate:
-        ddl-auto: create
-      properties:
-        hibernate:
-          show_sql: true
-          format_sql: true
-      #database-platform: org.hibernate.dialect.MySQL8Dialect
+        show_sql: true
+        format_sql: true
+    #database-platform: org.hibernate.dialect.MySQL8Dialect
 
-    devtools:
-      livereload:
-        enabled: true
 
-    server:
-      port: 8080
-
-    logging:
-      level:
-        org.hibernate.SQL: debug
-        #org.hibernate.type: trace
+logging:
+  level:
+    org.hibernate.SQL: debug
+    #org.hibernate.type: trace
 
 
